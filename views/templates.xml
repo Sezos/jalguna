@@ -1,0 +1,51 @@
+<odoo>
+  <record model= "ir.actions.act_window" id="kawaii_1">
+    <field name="name">Цагийн хуваарь оруулах нь </field>
+    <field name="res_model">jalguna</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="undsen" name="Үндсэн" parent="project.menu_main_pm" sequence="2"/>
+  <menuitem id="kawaii1" name="Өгөгдөл оруулах" parent="undsen" action="kawaii_1" />
+
+  <record model= "ir.ui.view" id="treeshu">
+    <field name="name">tree</field>
+    <field name="model">jalguna</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field string = "Нэр" name="neravna"/>
+        <field string = "Нас" name="nasavna"/>
+        <field string = "Мэргэжил" name="mergejilavna"/>
+        <field string = "Он сар өдөр" name="udurtsagavna"/>
+        <field string = "Ирсэн цаг" name="irtsagavna"/>
+        <field string = "Явсан цаг" name="yvtsagavna"/>
+      </tree>
+
+    </field>
+
+  </record>
+  <record model= "ir.ui.view" id="formshu">
+    <field name="name">form</field>
+    <field name="model">jalguna</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field string = "Нэр" name="neravna"/>
+            <field string = "Нас" name="nasavna"/>
+            <field string = "Мэргэжил" name="mergejilavna"/>
+            <field string = "Он сар өдөр" name="udurtsagavna"/>
+            <field string = "Ирсэн цаг" name="irtsagavna"/>
+            <field string = "Явсан цаг" name="yvtsagavna"/>
+          </group>
+          <form string="Button record"> 
+          <header>
+            <button string="Clear data" type="object" name="clear_record_data"/>
+          </header> 
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+
+</odoo>
